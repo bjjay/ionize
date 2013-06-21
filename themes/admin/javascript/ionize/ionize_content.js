@@ -336,7 +336,7 @@ ION.append({
 				{
 					elements.each(function(element){
 						$(element).set('html', responseHTML);
-						Browser.exec(responseJavaScript);
+						// Browser.exec(responseJavaScript);
 					});
 				}
 			}).send()
@@ -1164,6 +1164,15 @@ ION.append({
 			{
 				e.stop();
 
+				ION.contentUpdate({
+					'element': $('mainPanel'),
+					'url': admin_url + 'page/create/' + id_menu,
+					title: Lang.get('ionize_title_new_page')
+				});
+
+
+
+/*
 				MUI.Content.update(
 				{
 					element: $('mainPanel'),
@@ -1171,6 +1180,7 @@ ION.append({
 					loadMethod: 'xhr',
 					url: admin_url + 'page/create/' + id_menu
 				});
+*/
 			});
 		}
 	},

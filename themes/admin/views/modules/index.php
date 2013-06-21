@@ -43,7 +43,9 @@
 							<input id="segment<?php echo $module['folder']; ?>" class="inputtext" value="<?php echo $module['uri_user_segment']; ?>" />
 						<?php endif; ?>
 					</td>
-					<td><img src="<?php echo theme_url(); ?>images/icon_16_<?php if($module['installed']): ?>ok<?php else: ?>nok<?php endif; ?>.png" /></td>
+					<td>
+						<img src="<?php echo theme_url(); ?>images/icon_16_<?php if($module['installed']): ?>ok<?php else: ?>nok<?php endif; ?>.png" />
+					</td>
 					<td>
 						<?php if($module['installed']): ?>
 							<a class="moduleUninstall" href="modules/uninstall/<?php echo $module['folder']; ?>"><?php echo lang('ionize_label_module_uninstall'); ?>
